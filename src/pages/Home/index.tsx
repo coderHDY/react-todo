@@ -13,7 +13,6 @@ const Home: React.FC = () => {
     clearAllCompleted,
     clearAllActive,
     activeItems,
-    updateTodo,
   } = useTodoList();
 
   const [newTodo, setNewTodo] = useState<TodoListItem>({
