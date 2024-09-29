@@ -1,0 +1,40 @@
+.customCheckbox {
+  display: inline-flex;
+  align-items: center;
+}
+
+.customCheckbox input[type="checkbox"] {
+  display: none;
+}
+
+.checkMark {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 10px;
+  background-color: white;
+  box-sizing: border-box;
+  border: 1px solid #b9b9b9;
+  cursor: pointer;
+}
+
+.customCheckbox input:checked+.checkMark {
+  position: relative;
+  background: linear-gradient(to right bottom, #5eaeec, #7834de);
+  border: none;
+
+}
+
+.customCheckbox input:checked+.checkMark::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-image: url("../../assets/check.svg");
+  background-size: cover;
+}
