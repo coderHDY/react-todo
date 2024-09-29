@@ -10,7 +10,6 @@ const Home: React.FC = () => {
     todoList,
     addTodo,
     toggleTodo,
-    removeTodo,
     clearAllCompleted,
     clearAllActive,
     activeItems,
@@ -48,9 +47,6 @@ const Home: React.FC = () => {
       ...newTodo,
       isComplete: newVal,
     });
-  };
-  const onUpdateItem = (todoItem: TodoListItem) => {
-    updateTodo(todoItem);
   };
   return (
     <div className={styles.todoContainer}>

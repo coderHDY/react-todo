@@ -1,4 +1,4 @@
-import { setStorage, getStorage, removeStorage } from "utils/storage";
+import { setStorage, getStorage } from "utils/storage";
 import { useState, useEffect } from "react";
 import { TODO_STORAGE_KEY } from "utils/constant";
 import { TodoListItem } from "../types/todoItem";
@@ -103,7 +103,6 @@ const useTodoList = () => {
     void initTodoList();
   }, []);
   const activeItems = todoList.filter((todo) => !todo.isComplete).length;
-  const completedItems = todoList.filter((todo) => todo.isComplete).length;
   return {
     todoList,
     activeItems,
